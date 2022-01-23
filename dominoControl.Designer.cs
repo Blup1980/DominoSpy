@@ -1,7 +1,7 @@
 ﻿
 namespace DominoSpy
 {
-    partial class Domino
+    partial class DominoControl
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

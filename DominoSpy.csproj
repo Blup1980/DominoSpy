@@ -46,11 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="domino.cs">
+    <Compile Include="PhysicalDomino.cs" />
+    <Compile Include="dominoControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="domino.Designer.cs">
-      <DependentUpon>domino.cs</DependentUpon>
+    <Compile Include="dominoControl.Designer.cs">
+      <DependentUpon>dominoControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -58,6 +59,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhysicalSlot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

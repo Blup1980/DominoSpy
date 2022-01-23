@@ -31,18 +31,18 @@ namespace DominoSpy
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.slot2 = new DominoSpy.Domino();
-            this.slot3 = new DominoSpy.Domino();
-            this.slot4 = new DominoSpy.Domino();
-            this.slot5 = new DominoSpy.Domino();
-            this.slot6 = new DominoSpy.Domino();
-            this.slot7 = new DominoSpy.Domino();
-            this.slot8 = new DominoSpy.Domino();
-            this.slot9 = new DominoSpy.Domino();
-            this.slot1 = new DominoSpy.Domino();
-            this.slot0 = new DominoSpy.Domino();
-            this.domino8 = new DominoSpy.Domino();
-            this.domino1_out = new DominoSpy.Domino();
+            this.slot2 = new DominoSpy.DominoControl();
+            this.slot3 = new DominoSpy.DominoControl();
+            this.slot4 = new DominoSpy.DominoControl();
+            this.slot5 = new DominoSpy.DominoControl();
+            this.slot6 = new DominoSpy.DominoControl();
+            this.slot7 = new DominoSpy.DominoControl();
+            this.slot8 = new DominoSpy.DominoControl();
+            this.slot9 = new DominoSpy.DominoControl();
+            this.slot1 = new DominoSpy.DominoControl();
+            this.slot0 = new DominoSpy.DominoControl();
+            this.domino8 = new DominoSpy.DominoControl();
+            this.domino1_out = new DominoSpy.DominoControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -291,18 +291,18 @@ namespace DominoSpy
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Domino domino1_out;
-        private Domino domino8;
-        private Domino slot0;
-        private Domino slot1;
-        private Domino slot9;
-        private Domino slot8;
-        private Domino slot7;
-        private Domino slot6;
-        private Domino slot5;
-        private Domino slot4;
-        private Domino slot3;
-        private Domino slot2;
+        private DominoControl domino1_out;
+        private DominoControl domino8;
+        private DominoControl slot0;
+        private DominoControl slot1;
+        private DominoControl slot9;
+        private DominoControl slot8;
+        private DominoControl slot7;
+        private DominoControl slot6;
+        private DominoControl slot5;
+        private DominoControl slot4;
+        private DominoControl slot3;
+        private DominoControl slot2;
     }
 }
 

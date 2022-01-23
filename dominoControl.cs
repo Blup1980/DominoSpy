@@ -20,7 +20,7 @@ namespace DominoSpy
         NotPlaced
     }
 
-    public partial class Domino : Control
+    public partial class DominoControl : Control
     {
         private readonly Color _colorOutline = Color.Black;
         private readonly Color _colorVuPath = Color.DarkGreen;
@@ -97,7 +97,7 @@ namespace DominoSpy
         }
 
 
-        public Domino()
+        public DominoControl()
         {
             InitializeComponent();
             
