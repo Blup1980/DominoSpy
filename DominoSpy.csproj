@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RfidDtsParser.cs" />
+    <Compile Include="LogParser.cs" />
     <Compile Include="PhysicalDomino.cs" />
     <Compile Include="dominoControl.cs">
       <SubType>Component</SubType>

@@ -29,6 +29,11 @@ namespace DominoSpy
             get { return _control; }
         }
 
+        public SensorSide Side
+        {
+            get { return _sensorSide;  }
+        }
+
 
         public PhysicalSlot(int id, SensorSide side, DominoControl control)
         {

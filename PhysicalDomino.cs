@@ -26,13 +26,45 @@ namespace DominoSpy
             _correctSlot = correctSlot;
             _rfidA = rfidA;
             _rfidB = rfidB;
+            _rfidC = rfidC;
         }
 
-        public bool IsAtCorrectSlot()
+        public string RfidA
         {
-            if (_isPlaced == false || _isInverted == false)
+            get { return _rfidA; }
+            set { _rfidA = value; }
+        }
+
+        public string RfidB
+        {
+            get { return _rfidB; }
+            set { _rfidB = value; }
+        }
+
+        public string RfidC
+        {
+            get { return _rfidC; }
+            set { _rfidC = value; }
+        }
+
+        public bool IsAtCorrectPosAndOrient()
+        {
+            if (_isPlaced == false || _isInverted == true)
                 return false;
             return _currentSlot == _correctSlot;
+        }
+
+        public bool IsAtCorrectPos()
+        {
+            if (_isPlaced == false )
+                return false;
+            return _currentSlot == _correctSlot;
+        }
+
+        public bool IsInverted
+        {
+            get { return _isInverted; }
+            set { _isInverted = value; } 
         }
 
         public bool IsPlaced
@@ -66,8 +98,26 @@ namespace DominoSpy
         public int CorrectSlot
         {
             get { return _correctSlot; }
-            set { _correctSlot = value; }
         }
 
+        public bool HasRfid(String rfid)
+        {
+            return _rfidA.Equals(rfid) || _rfidB.Equals(rfid) || _rfidC.Equals(rfid);
+        }
+
+        public bool HasRfidAt(String rfid, SensorSide side )
+        {
+            switch (side)
+            {
+                case SensorSide.A:
+                    return _rfidA.Equals(rfid);
+                case SensorSide.B:
+                    return _rfidB.Equals(rfid);
+                case SensorSide.C:
+                    return _rfidC.Equals(rfid);
+                default:
+                    return false;
+            }
+        }
     }
 }

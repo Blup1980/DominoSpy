@@ -190,7 +190,7 @@ namespace DominoSpy
             {
                 foreach (PointF p in shapePoints)
                 {
-                    drawPoints.Add(new PointF(_smallDim / 2 + p.Y, _largeDim / 2 + p.X));
+                    drawPoints.Add(new PointF(_smallDim / 2 + p.X, _largeDim / 2 + p.Y));
                 }
             }
             else
@@ -215,15 +215,15 @@ namespace DominoSpy
         {
 
             List<PointF> shapePoints = new List<PointF> {
-                new PointF(-3 , -3),
-                new PointF(-27, -3),
-                new PointF(-11, -20),
-                new PointF(-21, -20),
-                new PointF(-41, +0),
-                new PointF(-21, +20),
-                new PointF(-11, +20),
-                new PointF(-27, +3),
-                new PointF(-3 , +3)
+                new PointF(-2 , -3),
+                new PointF(-17, -3),
+                new PointF(-7, -18),
+                new PointF(-12, -18),
+                new PointF(-24, +0),
+                new PointF(-12, +18),
+                new PointF(-7, +18),
+                new PointF(-17, +3),
+                new PointF(-2 , +3)
             };
 
             List<PointF> drawPointsA = new List<PointF>();

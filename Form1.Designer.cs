@@ -31,6 +31,9 @@ namespace DominoSpy
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Domino1_found = new System.Windows.Forms.Label();
+            this.Domino2_found = new System.Windows.Forms.Label();
             this.slot2 = new DominoSpy.DominoControl();
             this.slot3 = new DominoSpy.DominoControl();
             this.slot4 = new DominoSpy.DominoControl();
@@ -41,8 +44,9 @@ namespace DominoSpy
             this.slot9 = new DominoSpy.DominoControl();
             this.slot1 = new DominoSpy.DominoControl();
             this.slot0 = new DominoSpy.DominoControl();
-            this.domino8 = new DominoSpy.DominoControl();
+            this.domino2_out = new DominoSpy.DominoControl();
             this.domino1_out = new DominoSpy.DominoControl();
+            this.restartBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +59,36 @@ namespace DominoSpy
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 615);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 25);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Dominos cachés :";
+            // 
+            // Domino1_found
+            // 
+            this.Domino1_found.AutoSize = true;
+            this.Domino1_found.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Domino1_found.Location = new System.Drawing.Point(72, 690);
+            this.Domino1_found.Name = "Domino1_found";
+            this.Domino1_found.Size = new System.Drawing.Size(79, 25);
+            this.Domino1_found.TabIndex = 21;
+            this.Domino1_found.Text = "Trouvé";
+            // 
+            // Domino2_found
+            // 
+            this.Domino2_found.AutoSize = true;
+            this.Domino2_found.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Domino2_found.Location = new System.Drawing.Point(289, 690);
+            this.Domino2_found.Name = "Domino2_found";
+            this.Domino2_found.Size = new System.Drawing.Size(79, 25);
+            this.Domino2_found.TabIndex = 22;
+            this.Domino2_found.Text = "Trouvé";
             // 
             // slot2
             // 
@@ -129,7 +163,7 @@ namespace DominoSpy
             this.slot6.CorrectA = "";
             this.slot6.CorrectB = "";
             this.slot6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.slot6.Location = new System.Drawing.Point(774, 49);
+            this.slot6.Location = new System.Drawing.Point(776, 49);
             this.slot6.Name = "slot6";
             this.slot6.ShowCorrect = false;
             this.slot6.Size = new System.Drawing.Size(100, 200);
@@ -181,7 +215,7 @@ namespace DominoSpy
             this.slot9.MaximumSize = new System.Drawing.Size(200, 100);
             this.slot9.MinimumSize = new System.Drawing.Size(200, 100);
             this.slot9.Name = "slot9";
-            this.slot9.ShowCorrect = true;
+            this.slot9.ShowCorrect = false;
             this.slot9.Size = new System.Drawing.Size(200, 100);
             this.slot9.Status = DominoSpy.DominoStatus.NotPlaced;
             this.slot9.TabIndex = 12;
@@ -199,7 +233,7 @@ namespace DominoSpy
             this.slot1.MaximumSize = new System.Drawing.Size(200, 100);
             this.slot1.MinimumSize = new System.Drawing.Size(200, 100);
             this.slot1.Name = "slot1";
-            this.slot1.ShowCorrect = true;
+            this.slot1.ShowCorrect = false;
             this.slot1.Size = new System.Drawing.Size(200, 100);
             this.slot1.Status = DominoSpy.DominoStatus.NotPlaced;
             this.slot1.TabIndex = 11;
@@ -215,7 +249,7 @@ namespace DominoSpy
             this.slot0.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.slot0.Location = new System.Drawing.Point(556, 537);
             this.slot0.Name = "slot0";
-            this.slot0.ShowCorrect = true;
+            this.slot0.ShowCorrect = false;
             this.slot0.Size = new System.Drawing.Size(100, 200);
             this.slot0.Status = DominoSpy.DominoStatus.NotPlaced;
             this.slot0.TabIndex = 10;
@@ -225,24 +259,24 @@ namespace DominoSpy
             this.slot0.TextB = "0";
             this.slot0.Vertical = true;
             // 
-            // domino8
+            // domino2_out
             // 
-            this.domino8.CorrectA = "";
-            this.domino8.CorrectB = "";
-            this.domino8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.domino8.Location = new System.Drawing.Point(230, 652);
-            this.domino8.MaximumSize = new System.Drawing.Size(200, 100);
-            this.domino8.MinimumSize = new System.Drawing.Size(200, 100);
-            this.domino8.Name = "domino8";
-            this.domino8.ShowCorrect = false;
-            this.domino8.Size = new System.Drawing.Size(200, 100);
-            this.domino8.Status = DominoSpy.DominoStatus.NotPlaced;
-            this.domino8.TabIndex = 9;
-            this.domino8.TabStop = false;
-            this.domino8.Text = "domino8";
-            this.domino8.TextA = "3";
-            this.domino8.TextB = "2";
-            this.domino8.Vertical = false;
+            this.domino2_out.CorrectA = "";
+            this.domino2_out.CorrectB = "";
+            this.domino2_out.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.domino2_out.Location = new System.Drawing.Point(230, 652);
+            this.domino2_out.MaximumSize = new System.Drawing.Size(200, 100);
+            this.domino2_out.MinimumSize = new System.Drawing.Size(200, 100);
+            this.domino2_out.Name = "domino2_out";
+            this.domino2_out.ShowCorrect = false;
+            this.domino2_out.Size = new System.Drawing.Size(200, 100);
+            this.domino2_out.Status = DominoSpy.DominoStatus.NotPlaced;
+            this.domino2_out.TabIndex = 9;
+            this.domino2_out.TabStop = false;
+            this.domino2_out.Text = "domino8";
+            this.domino2_out.TextA = "0";
+            this.domino2_out.TextB = "5";
+            this.domino2_out.Vertical = false;
             // 
             // domino1_out
             // 
@@ -262,11 +296,25 @@ namespace DominoSpy
             this.domino1_out.TextB = "4";
             this.domino1_out.Vertical = false;
             // 
+            // restartBtn
+            // 
+            this.restartBtn.Location = new System.Drawing.Point(12, 26);
+            this.restartBtn.Name = "restartBtn";
+            this.restartBtn.Size = new System.Drawing.Size(75, 23);
+            this.restartBtn.TabIndex = 23;
+            this.restartBtn.Text = "Redémarrer";
+            this.restartBtn.UseVisualStyleBackColor = true;
+            this.restartBtn.Click += new System.EventHandler(this.restartBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 784);
+            this.Controls.Add(this.restartBtn);
+            this.Controls.Add(this.Domino2_found);
+            this.Controls.Add(this.Domino1_found);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.slot2);
             this.Controls.Add(this.slot3);
             this.Controls.Add(this.slot4);
@@ -277,22 +325,23 @@ namespace DominoSpy
             this.Controls.Add(this.slot9);
             this.Controls.Add(this.slot1);
             this.Controls.Add(this.slot0);
-            this.Controls.Add(this.domino8);
+            this.Controls.Add(this.domino2_out);
             this.Controls.Add(this.domino1_out);
             this.Controls.Add(this.pictureBox1);
             this.MaximumSize = new System.Drawing.Size(1273, 823);
             this.MinimumSize = new System.Drawing.Size(1273, 823);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "DominoSpy";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
         private DominoControl domino1_out;
-        private DominoControl domino8;
+        private DominoControl domino2_out;
         private DominoControl slot0;
         private DominoControl slot1;
         private DominoControl slot9;
@@ -303,6 +352,10 @@ namespace DominoSpy
         private DominoControl slot4;
         private DominoControl slot3;
         private DominoControl slot2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Domino1_found;
+        private System.Windows.Forms.Label Domino2_found;
+        private System.Windows.Forms.Button restartBtn;
     }
 }
 
