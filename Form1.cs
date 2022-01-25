@@ -36,6 +36,7 @@ namespace DominoSpy
 
             _logPaser = new LogParser(path + "/dominoLog.txt");
             _logPaser.RfidDetected += OnRfidDetected;
+            _logPaser.GameRestarted += OnGameRestarted;
             _watcher.Changed += this.OnLogChanged;
 
         }
@@ -53,6 +54,14 @@ namespace DominoSpy
                 return;
             }
             _logPaser.Parse();
+        }
+
+        private void OnGameRestarted(object sender, EventArgs e)
+        {
+            this.Invoke(new MethodInvoker(delegate
+            {
+                Reset();
+            }));
         }
 
         private void OnRfidDetected(object sender, RfidDetectedEventArgs e)
@@ -221,7 +230,7 @@ namespace DominoSpy
                 new PhysicalSlot( 1, SensorSide.B, slot1 ),
                 new PhysicalSlot( 2, SensorSide.B, slot2 ),
                 new PhysicalSlot( 3, SensorSide.A, slot3 ),
-                new PhysicalSlot( 4, SensorSide.A, slot4 ), // Sensor side unknown
+                new PhysicalSlot( 4, SensorSide.B, slot4 ), // Sensor side unknown
                 new PhysicalSlot( 5, SensorSide.B, slot5 ),
                 new PhysicalSlot( 6, SensorSide.C, slot6 ),
                 new PhysicalSlot( 7, SensorSide.A, slot7 ),
