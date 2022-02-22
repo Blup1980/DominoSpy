@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 
@@ -31,10 +26,10 @@ namespace DominoSpy
         private readonly Color _colorCrossFill = Color.Red;
         private readonly Color _colorText = Color.Black;
         private readonly Color _colorCorrectText = Color.Green;
-        private readonly int _smallDim = 100;
-        private readonly int _largeDim = 200;
-        private readonly int _fontSize = 50;
-        private readonly int _fontCorrect = 30;
+        private readonly int _smallDim = 75;
+        private readonly int _largeDim = 150;
+        private readonly int _fontSize = 40;
+        private readonly int _fontCorrect = 20;
         private String _textA = "";
         private String _textB = "";
         private String _correctA = "";

@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace DominoSpy
 {
     public enum SensorSide
     {
         A,
-        B,
-        C
+        B
     }
 
     class PhysicalSlot

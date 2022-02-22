@@ -1,12 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DominoSpy
@@ -78,6 +73,12 @@ namespace DominoSpy
                     d.IsPlaced = true;
                     d.IsFound = true;
                     d.CurrentSlot = i;
+
+                    if (d.TextA == d.TextB)
+                    {
+                        d.IsInverted = false;
+                        break;
+                    }
 
                     d.IsInverted = true;
                     if (d.HasRfidAt(e.Rfids[i], _slots[i].Side))
@@ -232,10 +233,10 @@ namespace DominoSpy
                 new PhysicalSlot( 3, SensorSide.A, slot3 ),
                 new PhysicalSlot( 4, SensorSide.B, slot4 ), // Sensor side unknown
                 new PhysicalSlot( 5, SensorSide.B, slot5 ),
-                new PhysicalSlot( 6, SensorSide.C, slot6 ),
+                new PhysicalSlot( 6, SensorSide.A, slot6 ),
                 new PhysicalSlot( 7, SensorSide.A, slot7 ),
                 new PhysicalSlot( 8, SensorSide.B, slot8 ),
-                new PhysicalSlot( 9, SensorSide.C, slot9 ),
+                new PhysicalSlot( 9, SensorSide.A, slot9 ),
             };
         }
 
